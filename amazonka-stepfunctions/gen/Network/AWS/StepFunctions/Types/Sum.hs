@@ -93,6 +93,7 @@ data HistoryEventType
   | TaskStateAborted
   | TaskStateEntered
   | TaskStateExited
+  | TaskSubmitted
   | WaitStateAborted
   | WaitStateEntered
   | WaitStateExited
@@ -178,6 +179,7 @@ instance ToText HistoryEventType where
         TaskStateAborted -> "TaskStateAborted"
         TaskStateEntered -> "TaskStateEntered"
         TaskStateExited -> "TaskStateExited"
+        TaskSubmitted -> "TaskSubmitted"
         WaitStateAborted -> "WaitStateAborted"
         WaitStateEntered -> "WaitStateEntered"
         WaitStateExited -> "WaitStateExited"
