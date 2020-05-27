@@ -135,11 +135,12 @@ instance FromText HistoryEventType where
         "taskstateaborted" -> pure TaskStateAborted
         "taskstateentered" -> pure TaskStateEntered
         "taskstateexited" -> pure TaskStateExited
+        "tasksubmitted" -> pure TaskSubmitted
         "waitstateaborted" -> pure WaitStateAborted
         "waitstateentered" -> pure WaitStateEntered
         "waitstateexited" -> pure WaitStateExited
         e -> fromTextError $ "Failure parsing HistoryEventType from value: '" <> e
-           <> "'. Accepted values: activityfailed, activityschedulefailed, activityscheduled, activitystarted, activitysucceeded, activitytimedout, choicestateentered, choicestateexited, executionaborted, executionfailed, executionstarted, executionsucceeded, executiontimedout, failstateentered, lambdafunctionfailed, lambdafunctionschedulefailed, lambdafunctionscheduled, lambdafunctionstartfailed, lambdafunctionstarted, lambdafunctionsucceeded, lambdafunctiontimedout, parallelstateaborted, parallelstateentered, parallelstateexited, parallelstatefailed, parallelstatestarted, parallelstatesucceeded, passstateentered, passstateexited, succeedstateentered, succeedstateexited, taskstateaborted, taskstateentered, taskstateexited, waitstateaborted, waitstateentered, waitstateexited"
+           <> "'. Accepted values: activityfailed, activityschedulefailed, activityscheduled, activitystarted, activitysucceeded, activitytimedout, choicestateentered, choicestateexited, executionaborted, executionfailed, executionstarted, executionsucceeded, executiontimedout, failstateentered, lambdafunctionfailed, lambdafunctionschedulefailed, lambdafunctionscheduled, lambdafunctionstartfailed, lambdafunctionstarted, lambdafunctionsucceeded, lambdafunctiontimedout, parallelstateaborted, parallelstateentered, parallelstateexited, parallelstatefailed, parallelstatestarted, parallelstatesucceeded, passstateentered, passstateexited, succeedstateentered, succeedstateexited, taskstateaborted, taskstateentered, taskstateexited, tasksubmitted, waitstateaborted, waitstateentered, waitstateexited"
 
 instance ToText HistoryEventType where
     toText = \case
